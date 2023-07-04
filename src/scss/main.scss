@@ -1,3 +1,82 @@
 @use "resets";
 @use "colors";
 @use "fonts";
+@use "mixins" as *;
+
+body {
+  text-align: center;
+}
+
+.header {
+  @include side-padding;
+  padding-block: 2rem;
+
+  display: flex;
+  background: colors.$dark-purple;
+
+  &__link {
+    position: relative;
+    margin-left: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: colors.$white;
+    text-decoration: none;
+    border-bottom: 0.1875rem solid colors.$eucalyptus;
+
+    &:hover,
+    &:focus {
+      color: colors.$eucalyptus;
+    }
+  }
+}
+
+.top {
+  position: relative;
+  @include side-padding;
+  padding-block: 2rem;
+  padding-bottom: 9rem;
+  background: colors.$dark-purple;
+  // border-radius: 0 0  5%;
+  border-radius: 0 0 275% 175% / 0 0 15% 3rem;
+
+  &__title {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    color: colors.$white;
+  }
+
+  &__underlined {
+    text-decoration: underline 0.1875rem solid colors.$eucalyptus;
+    text-underline-offset: 0.4rem;
+  }
+
+  &__btn {
+    margin-top: 2.5rem;
+    padding: 0.75rem 1.5rem;
+    background: colors.$eucalyptus;
+    font-weight: 700;
+    color: colors.$dark-purple;
+  }
+
+  &__hero-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    margin-inline: auto;
+    max-width: 75%;
+  }
+}
+
+.middle {
+  @include side-padding;
+}
+
+.bottom {
+  @include side-padding;
+}
+
+.footer {
+  @include side-padding;
+}

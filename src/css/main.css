@@ -66,11 +66,11 @@ button {
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+  src: url("../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Manrope";
-  src: url("../assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
 }
 body {
   font: 400 1.125rem/2rem "Manrope", sans-serif;
@@ -98,4 +98,74 @@ h5 {
 
 h6 {
   font: 600 2rem/2.5rem "Fraunces", sans-serif;
+}
+
+body {
+  text-align: center;
+}
+
+.header {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  display: flex;
+  background: #24053e;
+}
+.header__link {
+  position: relative;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 0.1875rem solid #44ffa1;
+}
+.header__link:hover, .header__link:focus {
+  color: #44ffa1;
+}
+
+.top {
+  position: relative;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  padding-bottom: 9rem;
+  background: #24053e;
+  border-radius: 0 0 275% 175%/0 0 15% 3rem;
+}
+.top__title {
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  color: #fff;
+}
+.top__underlined {
+  -webkit-text-decoration: underline 0.1875rem solid #44ffa1;
+          text-decoration: underline 0.1875rem solid #44ffa1;
+  text-underline-offset: 0.4rem;
+}
+.top__btn {
+  margin-top: 2.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #44ffa1;
+  font-weight: 700;
+  color: #24053e;
+}
+.top__hero-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  margin-inline: auto;
+  max-width: 75%;
+}
+
+.middle {
+  padding-inline: 1rem;
+}
+
+.bottom {
+  padding-inline: 1rem;
+}
+
+.footer {
+  padding-inline: 1rem;
 }/*# sourceMappingURL=main.css.map */
