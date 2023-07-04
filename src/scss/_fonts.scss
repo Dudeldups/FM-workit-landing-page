@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+body {
+  font: 400 1.125rem/2rem "Manrope", sans-serif;
+}
+
+@for $index from 1 through 6 {
+  h#{$index} {
+    font: 600 2rem/2.5rem "Fraunces", sans-serif;
+  }
+}
