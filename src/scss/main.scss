@@ -30,14 +30,27 @@ body {
   }
 }
 
+.curve {
+  border: none;
+  width: 100%;
+  aspect-ratio: 20 / 1;
+  clip-path: ellipse(55% 100% at top);
+
+  &-top {
+    background-color: colors.$dark-purple;
+  }
+
+  &-middle {
+    background-color: colors.$ghost-white;
+  }
+}
+
 .top {
   position: relative;
   @include side-padding;
-  padding-block: 2rem;
-  padding-bottom: 9rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
   background: colors.$dark-purple;
-  // border-radius: 0 0  5%;
-  border-radius: 0 0 275% 175% / 0 0 15% 3rem;
 
   &__title {
     font-size: 3.125rem;
@@ -52,25 +65,44 @@ body {
 
   &__btn {
     margin-top: 2.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     background: colors.$eucalyptus;
     font-weight: 700;
     color: colors.$dark-purple;
+    border: 0.1875rem solid colors.$eucalyptus;
+
+    &:hover,
+    &:active {
+      background: colors.$dark-purple;
+      color: colors.$eucalyptus;
+    }
   }
 
   &__hero-img {
     position: absolute;
+    z-index: 1;
     left: 0;
     right: 0;
     bottom: 0;
-    transform: translateY(50%);
     margin-inline: auto;
-    max-width: 75%;
+    transform: translateY(65%);
+    max-width: min(90%, 18.65rem);
   }
 }
 
 .middle {
   @include side-padding;
+  margin-top: 8rem;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__highlight {
+    &::before {
+      content: ;
+    }
+  }
 }
 
 .bottom {

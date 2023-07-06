@@ -36,6 +36,7 @@ picture {
 }
 
 button {
+  cursor: pointer;
   border: none;
 }
 
@@ -123,13 +124,26 @@ body {
   color: #44ffa1;
 }
 
+.curve {
+  border: none;
+  width: 100%;
+  aspect-ratio: 20/1;
+  -webkit-clip-path: ellipse(55% 100% at top);
+          clip-path: ellipse(55% 100% at top);
+}
+.curve-top {
+  background-color: #24053e;
+}
+.curve-middle {
+  background-color: #fcf8ff;
+}
+
 .top {
   position: relative;
   padding-inline: 1rem;
-  padding-block: 2rem;
-  padding-bottom: 9rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
   background: #24053e;
-  border-radius: 0 0 275% 175%/0 0 15% 3rem;
 }
 .top__title {
   font-size: 3.125rem;
@@ -143,23 +157,33 @@ body {
 }
 .top__btn {
   margin-top: 2.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background: #44ffa1;
   font-weight: 700;
   color: #24053e;
+  border: 0.1875rem solid #44ffa1;
+}
+.top__btn:hover, .top__btn:active {
+  background: #24053e;
+  color: #44ffa1;
 }
 .top__hero-img {
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;
-  transform: translateY(50%);
   margin-inline: auto;
-  max-width: 75%;
+  transform: translateY(65%);
+  max-width: min(90%, 18.65rem);
 }
 
 .middle {
   padding-inline: 1rem;
+  margin-top: 8rem;
+}
+.middle__list {
+  list-style: none;
 }
 
 .bottom {
