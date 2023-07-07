@@ -106,7 +106,7 @@ body {
 }
 
 .header {
-  padding-inline: 1rem;
+  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
   padding-block: 2rem;
   display: flex;
   background: #24053e;
@@ -140,7 +140,7 @@ body {
 
 .top {
   position: relative;
-  padding-inline: 1rem;
+  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
   padding-top: 2rem;
   padding-bottom: clamp(8rem, 7.01rem + 4.2vw, 10.8rem);
   background: #24053e;
@@ -172,8 +172,8 @@ body {
 
 .middle {
   position: relative;
-  padding-inline: 1rem;
-  padding-top: 8rem;
+  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  padding-top: clamp(7rem, 2.75rem + 18.11vw, 10rem);
   padding-bottom: 4rem;
   background: #fcf8ff;
 }
@@ -209,13 +209,14 @@ body {
   color: #24053e;
 }
 .middle__desc {
+  margin-top: 1rem;
   font-size: 1rem;
   line-height: 1.75rem;
   color: #584d62;
 }
 
 .bottom {
-  padding-inline: 1rem;
+  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
   padding-top: 20rem;
 }
 .bottom__text-wrapper {
@@ -233,7 +234,7 @@ body {
   max-width: 17.5rem;
 }
 .bottom__title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 0.93rem + 4.53vw, 3rem);
   font-weight: 600;
 }
 .bottom__desc {
@@ -256,8 +257,8 @@ body {
 }
 
 .footer {
-  padding-inline: 1rem;
-  margin-block: 4.5rem;
+  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  margin-block: clamp(4.6rem, 3.54rem + 4.507vw, 7.6rem);
   display: grid;
   justify-items: center;
 }
@@ -272,4 +273,53 @@ body {
 }
 .footer__link:hover, .footer__link:focus {
   transform: scale(1.12);
+}
+
+@media only screen and (min-width: 40.625rem) and (max-width: 62.5rem) {
+  .middle__highlight {
+    margin-left: 22%;
+    margin-right: 8.5%;
+    text-align: left;
+  }
+  .middle__highlight::before {
+    position: absolute;
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+@media only screen and (min-width: 40.625rem) {
+  .top::before {
+    content: url("../assets/images/bg-pattern-1.svg");
+    position: absolute;
+    left: 0;
+    transform: translate(-70%, -20%);
+  }
+  .top::after {
+    content: url("../assets/images/bg-pattern-2.svg");
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -10%);
+  }
+  .middle__title {
+    margin-top: 3rem;
+  }
+  .bottom {
+    text-align: left;
+    padding-top: 17rem;
+  }
+  .bottom__text-wrapper {
+    margin-left: 25%;
+    padding: 3.5rem;
+  }
+  .bottom__text-wrapper::after {
+    content: url("../assets/images/bg-pattern-3.svg");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-10%, 50%);
+  }
+  .bottom__img {
+    margin-left: 0;
+    transform: translate(-62%, -55%);
+    max-width: 17.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
