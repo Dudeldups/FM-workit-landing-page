@@ -159,7 +159,7 @@ body {
   text-underline-offset: clamp(0.4rem, 0.33rem + 0.3vw, 0.6rem);
 }
 .top__btn {
-  padding: 0.6rem 1.5rem;
+  padding: clamp(0.6rem, 0.18rem + 1.03vw, 0.8rem) 1.5rem;
   background: #44ffa1;
   font-weight: 700;
   color: #24053e;
@@ -198,20 +198,20 @@ body {
   margin: 2.5rem auto 0;
   border: 0.0625rem solid #24053e;
   border-radius: 50%;
-  width: 3rem;
-  height: 2.875rem;
+  width: clamp(3rem, 1.95rem + 2.58vw, 3.5rem);
+  aspect-ratio: 1/1;
   font: 600 1.25rem "Fraunces", sans-serif;
   color: #24053e;
 }
 .middle__title {
   margin-top: 1.5rem;
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.225rem + 1.29vw, 2rem);
   font-weight: 600;
   color: #24053e;
 }
 .middle__desc {
-  margin-top: 1rem;
-  font-size: 1rem;
+  margin-top: clamp(1rem, -0.57rem + 3.87vw, 1.75rem);
+  font-size: clamp(1rem, 0.737rem + 0.645vw, 1.125rem);
   line-height: 1.75rem;
   color: #584d62;
 }
@@ -239,17 +239,17 @@ body {
   font-weight: 600;
 }
 .bottom__desc {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.75rem;
+  margin-top: clamp(1rem, -1.096rem + 5.16vw, 2rem);
+  font-size: clamp(1rem, 0.737rem + 0.645vw, 1.125rem);
+  line-height: clamp(1.75rem, 1.225rem + 1.29vw, 2rem);
 }
 .bottom__btn {
-  padding: 0.6rem 1.5rem;
+  padding: clamp(0.6rem, 0.18rem + 1.03vw, 0.8rem) 1.5rem;
   background: #44ffa1;
   font-weight: 700;
   color: #24053e;
   border: 0.1875rem solid #44ffa1;
-  margin-top: 1.5rem;
+  margin-top: clamp(1.5rem, 0.45rem + 2.58vw, 2rem);
   font-size: 1rem;
 }
 .bottom__btn:hover, .bottom__btn:focus {
@@ -309,7 +309,7 @@ body {
   }
   .bottom__text-wrapper {
     margin-left: 25%;
-    padding: 3.5rem;
+    padding: clamp(3.5rem, 2.45rem + 2.58vw, 4rem);
   }
   .bottom__text-wrapper::after {
     content: url("../assets/images/bg-pattern-3.svg");
@@ -322,5 +322,41 @@ body {
     margin-left: 0;
     transform: translate(-62%, -55%);
     max-width: 17.5rem;
+  }
+}
+@media only screen and (min-width: 62.5rem) {
+  .top::before {
+    content: url("../assets/images/bg-pattern-1.svg");
+    position: absolute;
+    left: 0;
+    transform: translate(-40%, -10%);
+  }
+  .top::after {
+    content: url("../assets/images/bg-pattern-2.svg");
+    position: absolute;
+    right: 0;
+    transform: translate(28%, 10%);
+  }
+  .middle {
+    padding-top: 17rem;
+    padding-bottom: 8rem;
+  }
+  .middle__list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bottom__title {
+    font-size: 3.5rem;
+  }
+  .bottom__text-wrapper {
+    margin-left: 37%;
+  }
+  .bottom__text-wrapper::after {
+    transform: translate(-30%, 30%);
+  }
+  .bottom__img {
+    transform: translate(-80%, -35%);
+    max-width: 29.375rem;
   }
 }/*# sourceMappingURL=main.css.map */
