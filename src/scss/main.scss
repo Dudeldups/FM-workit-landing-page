@@ -9,7 +9,7 @@ body {
 
 .header {
   @include side-padding;
-  padding-block: 2rem;
+  padding-block: clamp(2rem, -1.145rem + 7.74vw, 3.5rem);
 
   display: flex;
   background: colors.$dark-purple;
@@ -22,6 +22,7 @@ body {
     color: colors.$white;
     text-decoration: none;
     border-bottom: 0.1875rem solid colors.$eucalyptus;
+    transition: color 0.3s ease-in;
 
     &:hover,
     &:focus {
@@ -104,7 +105,9 @@ body {
       border-radius: 50%;
       width: clamp(3rem, 1.95rem + 2.58vw, 3.5rem);
       aspect-ratio: 1 / 1;
-      font: 600 1.25rem "Fraunces", sans-serif;
+      font-family: "Fraunces";
+      font-size: clamp(1.25rem, 0.725rem + 1.29vw, 1.5rem);
+      font-weight: 600;
       color: colors.$dark-purple;
     }
   }

@@ -11,6 +11,7 @@
   font-weight: 700;
   color: colors.$dark-purple;
   border: 0.1875rem solid colors.$eucalyptus;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
 
   &:hover,
   &:focus {

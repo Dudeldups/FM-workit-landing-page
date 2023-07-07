@@ -107,7 +107,7 @@ body {
 
 .header {
   padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
-  padding-block: 2rem;
+  padding-block: clamp(2rem, -1.145rem + 7.74vw, 3.5rem);
   display: flex;
   background: #24053e;
 }
@@ -119,6 +119,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-bottom: 0.1875rem solid #44ffa1;
+  transition: color 0.3s ease-in;
 }
 .header__link:hover, .header__link:focus {
   color: #44ffa1;
@@ -164,6 +165,7 @@ body {
   font-weight: 700;
   color: #24053e;
   border: 0.1875rem solid #44ffa1;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
   margin-top: 2.5rem;
 }
 .top__btn:hover, .top__btn:focus {
@@ -200,7 +202,9 @@ body {
   border-radius: 50%;
   width: clamp(3rem, 1.95rem + 2.58vw, 3.5rem);
   aspect-ratio: 1/1;
-  font: 600 1.25rem "Fraunces", sans-serif;
+  font-family: "Fraunces";
+  font-size: clamp(1.25rem, 0.725rem + 1.29vw, 1.5rem);
+  font-weight: 600;
   color: #24053e;
 }
 .middle__title {
@@ -249,6 +253,7 @@ body {
   font-weight: 700;
   color: #24053e;
   border: 0.1875rem solid #44ffa1;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
   margin-top: clamp(1.5rem, 0.45rem + 2.58vw, 2rem);
   font-size: 1rem;
 }
