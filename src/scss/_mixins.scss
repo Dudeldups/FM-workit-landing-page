@@ -1,3 +1,19 @@
+@use "colors";
+
 @mixin side-padding {
   padding-inline: 1rem;
+}
+
+@mixin green-button {
+  padding: 0.6rem 1.5rem;
+  background: colors.$eucalyptus;
+  font-weight: 700;
+  color: colors.$dark-purple;
+  border: 0.1875rem solid colors.$eucalyptus;
+
+  &:hover,
+  &:focus {
+    background: colors.$dark-purple;
+    color: colors.$eucalyptus;
+  }
 }

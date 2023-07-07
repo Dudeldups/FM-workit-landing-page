@@ -49,50 +49,46 @@ body {
   position: relative;
   @include side-padding;
   padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: clamp(8rem, 7.01rem + 4.2vw, 10.8rem);
   background: colors.$dark-purple;
 
   &__title {
-    font-size: 3.125rem;
-    line-height: 3.125rem;
+    margin: auto;
+    max-width: 13ch;
+    font-size: clamp(3.125rem, 2.46rem + 2.82vw, 5rem);
+    line-height: clamp(3.125rem, 2.46rem + 2.82vw, 5rem);
     color: colors.$white;
   }
 
   &__underlined {
     text-decoration: underline 0.1875rem solid colors.$eucalyptus;
-    text-underline-offset: 0.4rem;
+    text-underline-offset: clamp(0.4rem, 0.33rem + 0.3vw, 0.6rem);
   }
 
   &__btn {
+    @include green-button;
     margin-top: 2.5rem;
-    padding: 0.6rem 1.5rem;
-    background: colors.$eucalyptus;
-    font-weight: 700;
-    color: colors.$dark-purple;
-    border: 0.1875rem solid colors.$eucalyptus;
-
-    &:hover,
-    &:active {
-      background: colors.$dark-purple;
-      color: colors.$eucalyptus;
-    }
   }
+}
+
+.middle {
+  position: relative;
+  @include side-padding;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background: colors.$ghost-white;
+  // clip-path: ellipse(150% 100% at top);
 
   &__hero-img {
     position: absolute;
     z-index: 1;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 0;
     margin-inline: auto;
-    transform: translateY(65%);
-    max-width: min(90%, 18.65rem);
+    transform: translate(5%, -45%);
+    max-width: clamp(14rem, 9.47rem + 39.13vw, 44.69rem);
   }
-}
-
-.middle {
-  @include side-padding;
-  margin-top: 8rem;
 
   &__list {
     list-style: none;
@@ -100,15 +96,91 @@ body {
 
   &__highlight {
     &::before {
-      content: ;
+      content: counter(list-item);
+      display: grid;
+      place-content: center;
+      margin: 2.5rem auto 0;
+      border: 0.0625rem solid colors.$dark-purple;
+      border-radius: 50%;
+      width: 3rem;
+      height: 2.875rem;
+      font: 600 1.25rem "Fraunces", sans-serif;
+      color: colors.$dark-purple;
     }
+  }
+
+  &__title {
+    margin-top: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: colors.$dark-purple;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: colors.$davys-grey;
   }
 }
 
 .bottom {
   @include side-padding;
+  padding-top: 20rem;
+
+  &__text-wrapper {
+    position: relative;
+    padding: 1.95rem;
+    background: colors.$dark-purple;
+    color: colors.$white;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    margin-inline: auto;
+    transform: translate(0, -80%);
+
+    max-width: 17.5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__desc {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  &__btn {
+    @include green-button;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
 }
 
 .footer {
   @include side-padding;
+  margin-block: 4.5rem;
+  display: grid;
+  justify-items: center;
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    margin-top: 3.5rem;
+  }
+
+  &__link {
+    transition: transform 0.2s ease-in;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.12);
+    }
+  }
 }

@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="src/assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="src/css/main.css" />
 
@@ -31,14 +31,14 @@
           Data <span class="top__underlined">tailored</span> to your needs.
         </h1>
         <button class="top__btn">Learn more</button>
-        <img
-          class="top__hero-img"
-          src="src/assets/images/image-hero.webp"
-          alt=""
-        />
       </section>
       <hr class="curve curve-top" />
       <section class="middle">
+        <img
+          class="middle__hero-img"
+          src="src/assets/images/image-hero.webp"
+          alt=""
+        />
         <ol class="middle__list">
           <li class="middle__highlight">
             <h2 class="middle__title">Actionable insights</h2>
@@ -67,14 +67,21 @@
       </section>
       <hr class="curve curve-middle" />
       <section class="bottom">
-        <h3 class="bottom__title">Be the first to test</h3>
-        <p class="bottom__desc">
-          Hi, I'm Louis Graham, the founder of the company. Book a demo call
-          with me to become a beta tester for our app and kickstart your
-          company. Apply for access below and I’ll be in touch to schedule a
-          call.
-        </p>
-        <button class="bottom__btn">Apply for access</button>
+        <article class="bottom__text-wrapper">
+          <img
+            class="bottom__img"
+            src="src/assets/images/image-founder.webp"
+            alt="Louis Graham"
+          />
+          <h3 class="bottom__title">Be the first to test</h3>
+          <p class="bottom__desc">
+            Hi, I'm Louis Graham, the founder of the company. Book a demo call
+            with me to become a beta tester for our app and kickstart your
+            company. Apply for access below and I’ll be in touch to schedule a
+            call.
+          </p>
+          <button class="bottom__btn">Apply for access</button>
+        </article>
       </section>
     </main>
     <footer class="footer">
