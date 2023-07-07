@@ -47,6 +47,7 @@ body {
 
 .top {
   position: relative;
+  overflow-x: hidden;
   @include side-padding;
   padding-top: 2rem;
   padding-bottom: clamp(8rem, 7.01rem + 4.2vw, 10.8rem);
@@ -241,7 +242,7 @@ body {
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translate(-10%, 50%);
+        transform: translate(-5%, 50%);
       }
     }
 

@@ -106,7 +106,7 @@ body {
 }
 
 .header {
-  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
   padding-block: 2rem;
   display: flex;
   background: #24053e;
@@ -140,7 +140,8 @@ body {
 
 .top {
   position: relative;
-  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  overflow-x: hidden;
+  padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
   padding-top: 2rem;
   padding-bottom: clamp(8rem, 7.01rem + 4.2vw, 10.8rem);
   background: #24053e;
@@ -172,7 +173,7 @@ body {
 
 .middle {
   position: relative;
-  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
   padding-top: clamp(7rem, 2.75rem + 18.11vw, 10rem);
   padding-bottom: 4rem;
   background: #fcf8ff;
@@ -216,7 +217,7 @@ body {
 }
 
 .bottom {
-  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
   padding-top: 20rem;
 }
 .bottom__text-wrapper {
@@ -257,7 +258,7 @@ body {
 }
 
 .footer {
-  padding-inline: clamp(1rem, -1.045rem + 8.73vw, 2.5rem);
+  padding-inline: clamp(1rem, -4.8rem + 15.5vw, 10rem);
   margin-block: clamp(4.6rem, 3.54rem + 4.507vw, 7.6rem);
   display: grid;
   justify-items: center;
@@ -315,7 +316,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(-10%, 50%);
+    transform: translate(-5%, 50%);
   }
   .bottom__img {
     margin-left: 0;
