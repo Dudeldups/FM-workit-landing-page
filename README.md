@@ -19,7 +19,7 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
 
 ### Links
 
-- [Solution on Frontend Mentor]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/scss-workit-landing-page-sVGVQxooJQ)
 - [Live site](https://dudeldups.github.io/FM-workit-landing-page/)
 
 ## My process
